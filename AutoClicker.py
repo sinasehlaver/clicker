@@ -5,7 +5,7 @@ import threading
 
 def on_click(x, y, button, pressed):
 	global pos_x, pos_y
-	if pressed:#set_var.get():
+	if pressed:
 		pos_x = x
 		pos_y = y
 	else:
@@ -47,22 +47,6 @@ def auto_click():
 	elif var_txt_auto.get() == "Stop":
 		print("stopped")
 		var_txt_auto.set("Start")
-
-
-def load_last_dir():
-	try:
-		with open("lastdir.txt", "r") as f:
-			for line in f:
-				pass#last_dir.set(line.strip())
-				break
-	except:
-		pass
-
-
-def save_last_dir(path):
-	pass#last_dir.set(path)
-	with open("lastdir.txt", "w+") as f:
-		pass#f.write(last_dir.get())
 
 
 mouse = Controller()
